@@ -1,10 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <footer>
+      <footer className="text-center">
         Coded with <span className="emojiColor">♥️</span> by{" "}
         <a href="https://monumental-malasada-41cd9f.netlify.app">
           Mariama Touray
