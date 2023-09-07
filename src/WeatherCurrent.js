@@ -1,5 +1,6 @@
 import React from "react";
 import "./WeatherCurrent.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherCurrent() {
   return (
@@ -9,6 +10,33 @@ export default function WeatherCurrent() {
         <li>Monday 22:00</li>
         <li>Partly cloudy</li>
       </ul>
+
+      <div className="row m-5">
+        <div className="d-flex">
+          <div className="col-md-6 currentTemp col-6 d-flex">
+            <WeatherIcon code={"01d"} size={90} />
+            <h2 className="m-3">29&deg;</h2>
+          </div>
+          <div className="m-4">
+            <ul>
+              <li>Feels like 32&deg;</li>
+              <li>Wind: 4 m/s</li>
+              <li>Humidity: 70%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="WeatherForecast">
+          <div>
+            <h3>Mon</h3>
+            <div className="d-flex">
+              <h4>28&deg; 24&deg;</h4>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
