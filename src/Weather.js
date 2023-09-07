@@ -1,6 +1,7 @@
 import React from "react";
 import "./Weather.css";
 import videoFile from "./star-bg-skycast.mp4";
+import WeatherCurrent from "./WeatherCurrent";
 
 export default function Weather() {
   return (
@@ -8,7 +9,7 @@ export default function Weather() {
       <video className="videoBackground shadow-lg" autoPlay muted loop>
         <source src={videoFile} type="video/mp4"></source>
       </video>
-      <form>
+      <form className="mb-md-5">
         <input
           type="search"
           placeholder="Enter city.."
@@ -17,6 +18,10 @@ export default function Weather() {
         />
         <button type="submit">🔍</button>
       </form>
+
+      <div className="row">
+        <WeatherCurrent />
+      </div>
     </div>
   );
 }
