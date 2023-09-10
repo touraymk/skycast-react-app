@@ -12,12 +12,12 @@ export default function WeatherCurrent() {
       </ul>
 
       <div className="row m-5">
-        <div className="d-flex">
-          <div className="col-md-6 currentTemp col-6 d-flex">
+        <div className="currentWeather">
+          <div className="col-md-6 currentTemp d-flex">
             <WeatherIcon code={"01d"} size={90} />
             <h2 className="m-3">29&deg;</h2>
           </div>
-          <div className="m-4">
+          <div className="m-4 col-md-6 currentDescription">
             <ul>
               <li>Feels like 32&deg;</li>
               <li>Wind: 4 m/s</li>

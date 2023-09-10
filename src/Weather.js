@@ -9,7 +9,7 @@ export default function Weather() {
       <video className="videoBackground shadow-lg" autoPlay muted loop>
         <source src={videoFile} type="video/mp4"></source>
       </video>
-      <form className="mb-md-4">
+      <form className="m-md-4">
         <input
           type="search"
           placeholder="Enter city.."
