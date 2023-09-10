@@ -29,10 +29,11 @@ export default function WeatherCurrent() {
 
       <div className="row">
         <div className="WeatherForecast">
-          <div>
+          <div className="col text-center w-25">
             <h3>Mon</h3>
-            <div className="d-flex">
-              <h4>28&deg; 24&deg;</h4>
+            <WeatherIcon code={"01d"} size={40} />
+            <div className="d-flex justify-content-center">
+              <h4 className="text-center">28&deg; 24&deg;</h4>
             </div>
           </div>
         </div>
