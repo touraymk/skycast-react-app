@@ -7,9 +7,9 @@ export default function WeatherCurrent(props) {
   console.log(props.data.description);
   return (
     <div className="WeatherCurrent">
-      <div className="mt-3 d-flex">
+      <div className="currentCityCountry mt-3 d-flex">
         <h1>{props.data.city}</h1>
-        <span>{props.data.country}</span>
+        <span className="country">{props.data.country}</span>
       </div>
       <ul>
         <li>
@@ -35,18 +35,6 @@ export default function WeatherCurrent(props) {
               <li>Wind: {Math.round(props.data.wind)} m/s</li>
               <li>Humidity: {props.data.humidity}%</li>
             </ul>
-          </div>
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="WeatherForecast">
-          <div className="col text-center w-25">
-            <h3>Mon</h3>
-            <WeatherIcon code={"01d"} size={40} />
-            <div className="d-flex justify-content-center">
-              <h4 className="text-center">28&deg; 24&deg;</h4>
-            </div>
           </div>
         </div>
       </div>

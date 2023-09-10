@@ -3,15 +3,17 @@ import axios from "axios";
 import "./Weather.css";
 import videoFile from "./star-bg-skycast.mp4";
 import WeatherCurrent from "./WeatherCurrent";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   let [weatherData, setWeatherData] = useState({ ready: false });
   let [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    console.log(weatherData.description);
+    console.log(weatherData.coordinates);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       country: response.data.sys.country,
       date: new Date(response.data.dt * 1000),
@@ -21,7 +23,6 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
-      coordinates: response.data.coord,
     });
   }
 
@@ -60,6 +61,10 @@ export default function Weather(props) {
 
         <div className="row">
           <WeatherCurrent data={weatherData} />
+        </div>
+
+        <div className="row">
+          <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
       </div>
     );
