@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="container mt-md-5 appWrapper">
-        <Weather />
+        <Weather defaultCity={"Bridgetown"} />
       </div>
 
       <footer className="text-center">

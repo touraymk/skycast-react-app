@@ -1,3 +1,7 @@
+.WeatherCurrent .currentWeather {
+  display: flex;
+}
+
 .WeatherCurrent h1 {
   font-weight: 700;
   letter-spacing: 2px;
