@@ -1,5 +1,6 @@
 import React from "react";
 import "./WeatherCurrent.css";
+import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherCurrent(props) {
@@ -11,7 +12,9 @@ export default function WeatherCurrent(props) {
         <span>{props.data.country}</span>
       </div>
       <ul>
-        <li>Monday 22:00</li>
+        <li>
+          <FormattedDate date={props.data.date} />
+        </li>
         <li>
           {((props.data && props.data.description) || "")
             .charAt(0)
