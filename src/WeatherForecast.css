@@ -1,0 +1,12 @@
+.WeatherForecast {
+  display: inline-flex;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .WeatherForecast .weatherForecast {
+    display: grid;
+    gap: 5px;
+  }
+}

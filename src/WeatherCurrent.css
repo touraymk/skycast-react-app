@@ -43,6 +43,11 @@
     text-align: center;
   }
 
+  .WeatherCurrent .currentCityCountry {
+    display: flex;
+    justify-content: center;
+  }
+
   .WeatherCurrent h1 {
     margin-top: 25px;
   }

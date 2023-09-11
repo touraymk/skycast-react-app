@@ -4,7 +4,6 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherCurrent(props) {
-  console.log(props.data.description);
   return (
     <div className="WeatherCurrent">
       <div className="currentCityCountry mt-3 d-flex">
